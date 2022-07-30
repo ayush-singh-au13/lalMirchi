@@ -5,8 +5,9 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "if-env NODE_ENV=production ?? npm run start:prod || npm run start:dev",
-    "dev": "cross-env NODE_ENV=development nodemon app.js .env.dev"
+    "start": "node app.js",
+    "dev":"nodemon app.js"
+    
   },
   "keywords": [],
   "author": "",
