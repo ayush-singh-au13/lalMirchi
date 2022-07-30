@@ -22,6 +22,11 @@ if(process.env.NODE_ENV === 'development'){
 app.use(cors());
 app.use(express.json());
 
+//health check 
+app.get('/',(req,res) =>{
+    res.status(200).send('Kavya is too hot to Handle !!')
+})
+
 //Routes
 app.use('/v1/user',require('./src/components/routes/user.routes'));
 app.use('/v1/products',require('./src/components/routes/product.routes'));
